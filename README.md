@@ -1,9 +1,6 @@
-<header>
-<h1> <a href="https://github.com/javierhersan/react-template" style="color:white">React Template</a></h1>
-<hr style="height:3px;">
-</header>
+# React Template
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/javierhersan/react-template/LICENSE) [![npm version](https://img.shields.io/npm/v/)]() [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/javierhersan/react-template/CONTRIBUTING.md)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/javierhersan/react-template/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/javierhersan/react-template/CONTRIBUTING.md)
 
 This project is a React template designed to accelerate web development. The primary goal is to enable developers to bring their ideas to the market as quickly as possible, with an integrated go to market strategy.
 
