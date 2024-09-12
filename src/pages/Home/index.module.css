@@ -45,12 +45,13 @@
     border: none;
     height: 1px;
     background-color: #e6e5e5;
-    margin: 6px 0px 0px 0px;
+    margin: auto
 }
 
 .terms{
     width: 240px;
     font-size: 10px;
     line-height: 1.4;
+    padding-top: 10px;
 }
 
