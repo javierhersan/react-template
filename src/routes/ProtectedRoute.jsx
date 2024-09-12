@@ -1,15 +1,13 @@
 import { Navigate } from 'react-router-dom'
-import { username as _username, password as _password } from '../state'
 import { useSignals } from '@preact/signals-react/runtime'
 
-function ProtectedRoute({
-	children,
-	username = _username,
-	password = _password,
-}) {
+import useCredentialStore from '../state'
+
+function ProtectedRoute({ children }) {
 	useSignals()
+	const { username, password } = useCredentialStore()
 	console.log('ProtectedRoute')
-	if (!username.value && !password.value) {
+	if (!username && !password) {
 		return <Navigate to='/' replace />
 	}
 	return children

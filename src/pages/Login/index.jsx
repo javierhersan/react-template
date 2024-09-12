@@ -6,10 +6,12 @@ import logo from '../../assets/images/logo.png'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
 import CrossIcon from '../../assets/icons/CrossIcon'
-import { setUsername, setPassword } from '../../state'
+import useCredentialStore from '../../state'
 
 export default function Login() {
 	const navigate = useNavigate()
+	const { setUsername, setPassword } = useCredentialStore()
+
 	const login = (username, password) => {
 		setUsername(username)
 		setPassword(password)

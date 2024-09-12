@@ -1,18 +1,13 @@
 import styles from './index.module.css'
-import { username as _username, password as _password } from '../../state'
+import useCredentialStore from '../../state'
 import { useSignals } from '@preact/signals-react/runtime'
 import MobileNav from '../../components/MobileNav'
 // import { useEffect } from 'react'
 
-export default function Feed({ username = _username, password = _password }) {
+export default function Feed() {
 	useSignals()
+	const { username, password } = useCredentialStore()
 	console.log('Feed')
-	// useEffect(() => {
-	// 	setInterval(() => {
-	// 		username.value = null
-	// 		password.value = null
-	// 	}, 10000)
-	// }, [])
 
 	return (
 		<div className={styles.container}>

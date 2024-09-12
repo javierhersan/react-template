@@ -1,15 +1,11 @@
-import { signal, effect } from "@preact/signals-react"
+import { create } from 'zustand'
 
-export const username = signal(null)
-export function setUsername (key) {
-	username.value = key
-}
+const useCredentialStore = create((set) => ({
+  username: null,
+  password: null,
+  setUsername: (key) => set({ username: key }),
+  setPassword: (key) => set({ password: key }),
+}))
 
-export const password = signal(null)
-export function setPassword (key) {
-	password.value = key
-}
-
-effect(()=>{console.log("Username signal: ", username.value)})
-effect(()=>{ console.log("Password signal: ", password.value)})
+export default useCredentialStore
 
