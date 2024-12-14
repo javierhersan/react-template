@@ -9,8 +9,9 @@ import CrossIcon from '../../assets/icons/CrossIcon'
 import { useCredentialStore } from '../../state/AuthState'
 
 export default function Login() {
-	const { setUsername, setPassword } = useCredentialStore()
 	const navigate = useNavigate()
+	const { setUsername, setPassword } = useCredentialStore()
+
 	const login = (username, password) => {
 		setUsername(username)
 		setPassword(password)
