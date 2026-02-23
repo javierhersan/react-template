@@ -1,23 +1,18 @@
-// import { defineConfig } from 'vite'
-// import react from '@vitejs/plugin-react-swc'
-// import checker from 'vite-plugin-checker'
-
-// // https://vitejs.dev/config/
-// export default defineConfig({
-//   plugins: [
-//     react(),
-//     checker({
-//       eslint: {
-//         lintCommand: 'eslint "./src/**/*.{js,jsx}"', // for example, lint .ts & .tsx
-//       },
-//     }),
-//   ]
-// })
-
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+// import checker from 'vite-plugin-checker'
+// import eslint from 'vite-plugin-eslint'
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-	plugins: [react()],
+  plugins: [
+    react(), 
+    tailwindcss(),
+    // checker({
+    //   eslint: {
+    //     lintCommand: 'eslint "./src/**/*.{js,jsx}"', // e.g.: lint .ts & .tsx
+    //   },
+    // }),
+  ],
 })
