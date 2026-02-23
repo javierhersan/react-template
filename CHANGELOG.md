@@ -4,6 +4,7 @@
 
 - **Vite**: Update `Vite` version from v4 to v7. ([@javierhersan](https://github.com/javierhersan) in [#00000](https://github.com/javierhersan/react-template))
 - **React**: Update `react` version from v18 to v19. ([@javierhersan](https://github.com/javierhersan) in [#00000](https://github.com/javierhersan/react-template))
+- **TailwindCSS**: Added support for `tailwindcss` v4. ([@javierhersan](https://github.com/javierhersan) in [#00000](https://github.com/javierhersan/react-template))
 
 ## 0.1.0 (February 15, 2024)
 

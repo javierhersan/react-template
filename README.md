@@ -8,7 +8,7 @@ React Template empowers developers to create interactive and dynamic user interf
 
 ## Features
 
-Version 0.1.0 of the project, released on February 16, 2024, introduces a robust set of features designed to streamline the development and maintenance of a React-based web application.
+Version 0.2.0 of the project, released on February 23, 2025, introduces a robust set of features designed to streamline the development and maintenance of a React-based web application.
 
 At the core of this project is the integration of Vite and esbuild as the chosen build tools. This choice aims to enhance development experience and build times. The project is developed in JavaScript, although in future versions a typescript project willbe included as well.
 
@@ -18,7 +18,7 @@ Also a component library of reusable components has been included, contributing 
 
 The template includes authentication and protected routes adding a layer of security and control over the application.
 
-Global state management has been implemented using Preact Signals. Signal enhance data management and sharing across components, contributing to a more efficient and scalable architecture. Signals also improve DX because they are easy to configure.
+Global state management has been implemented using Zustand stores. Stores improve DX because they are easy to configure.
 
 The project also includes service modules for external interactions, facilitating communication with APIs and external data sources.
 
@@ -32,7 +32,7 @@ To maintain code quality, the project incorporates tools such as ESLint for code
 
 This is the installation guide.
 
-1. First, install NodeJS v18 or greater.
+1. First, install NodeJS v22 or greater.
 2. Second install a package manager (npm, pnpm or yarn)
 3. Clone the project in your local machine
 
@@ -43,13 +43,13 @@ $ git clone https://github.com/javierhersan/react-template
 4. Install all the dependencies of the project.
 
 ```console
-$ npm install
+$ pnpm install
 ```
 
 5. Run the project
 
 ```console
-$ npm run dev
+$ npm start
 ```
 
 ## Configuration
@@ -61,14 +61,14 @@ This is the configuration guide. In case you want to start a fresh project based
 Vite configuration for React.
 
 ```console
-$ npm create vite@latest
+$ pnpm create vite
 √ Project name: ... front
 √ Select a framework: » React
-√ Select a variant: » JavaScript + SWC
-$ npm run dev
+√ Select a variant: » Typescript
+$ pnmp start
 
-$ npm install
-$ npm install react react-dom react-router-dom
+$ pnmp install
+$ pnmp install react react-dom react-router-dom
 $ ...
 ```
 
@@ -79,8 +79,8 @@ ESLint and Prettier configuration for React.
 1. Install linter as a development dependency.
 
    ```console
-   $ npm install eslint -D
-   $ npm install standard -D
+   $ pnmp install eslint -D
+   $ pnmp install standard -D
    ```
 
 2. Install VSCode extension: ESLint by Microsoft.
@@ -88,12 +88,12 @@ ESLint and Prettier configuration for React.
 3. Initialize the linter, its configuration, and install its dependencies.
 
    ```console
-   $ npx eslint --init
+   $ pnpm dlx eslint --init
    ```
 
    ```console
-    $ npx eslint --init # Option 1
-    $ npm init @eslint/config # Option 2
+    $ pnpm dlx eslint --init # Option 1
+    $ pnpm create @eslint/config # Option 2
     √ How would you like to use ESLint? · style
     √ What type of modules does your project use? · esm
     √ Which framework does your project use? · react
@@ -116,21 +116,21 @@ ESLint and Prettier configuration for React.
 5. Show linting errors.
 
    ```console
-   $ npx eslint .
-   $ npx eslint src
+   $ pnpm dlx eslint .
+   $ pnpm dlx eslint src
    ```
 
 6. Fix linting errors
 
    ```console
-   $ npx eslint . --fix
-   $ npx eslint src --fix
+   $ pnpm dlx eslint . --fix
+   $ pnpm dlx eslint src --fix
    ```
 
 7. Install prettier as a development dependency.
 
    ```console
-   $ npm install prettier -D
+   $ pnpm install prettier -D
    ```
 
 8. Install VSCode extension: Prettier by Prettier
@@ -140,8 +140,8 @@ ESLint and Prettier configuration for React.
 10. Format code with Prettier (show the changes to be made).
 
     ```console
-    $ npx prettier .
-    $ npx prettier src
+    $ pnpm prettier .
+    $ pnpm prettier src
     ```
 
 11. Format code with Prettier (apply changes).
@@ -160,7 +160,7 @@ ESLint and Prettier configuration for React.
     Install "eslint-config-prettier" plugin.
 
     ```console
-    $ npm install eslint-config-prettier -D
+    $ pnpm install eslint-config-prettier -D
     ```
 
     Add to "extends" object in .eslintrc.json "eslint-config-prettier".
@@ -202,7 +202,7 @@ ESLint and Prettier configuration for React.
     Install "vite-plugin-eslint" plugin.
 
     ```console
-    $ npm install vite-plugin-eslint -D
+    $ pnpm install vite-plugin-eslint -D
     ```
 
     Add "vite-plugin-eslint" plugin to Vite. Edit "vite.config.js" file.
